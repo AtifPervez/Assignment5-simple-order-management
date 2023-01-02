@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 const bodyParser = require("body-parser")
 const app = express()
 app.use(bodyParser.json())
-mongoose.connect("mongodb+srv://atifpervez:34BmDa5XVvtznQvO@code.8mvlc.mongodb.net/assignmet5_simpleOrderManagement")
+mongoose.connect("mongodb+srv://atifpervez:34BmDa5XVvtznQvO@code.8mvlc.mongodb.net/assignment5_simpleOrderManagement")
     .then(() => {
         console.log("Connected With MongoDb");
     })

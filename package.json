@@ -13,9 +13,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/AtifPervez/C-Personal-Function-Up-Assignments-Assignment5-A-simple-Order-Management-System-project/issues"
+    "url":" https://github.com/AtifPervez/Assignment5-simple-order-management.git"
   },
-  "homepage": "https://github.com/AtifPervez/C-Personal-Function-Up-Assignments-Assignment5-A-simple-Order-Management-System-project#readme",
+  "homepage": " https://github.com/AtifPervez/Assignment5-simple-order-management.git",
   "dependencies": {
     "express": "^4.18.2",
     "mongoose": "^6.8.2",
