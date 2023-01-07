@@ -5,27 +5,26 @@ const orderSchema = new mongoose.Schema({
         type: ObjectId,
         ref: "customer"
     },
-    product: {
+    productName: {
         type: String,
         required: true,
         trim: true
     },
     price: {
-        type: String,
+        type: Number,
         required: true,
         trim: true
     },
     discount:{
-        type:String,
-        required:true,
-        trim:true
-    }
-    
+        type:Number
+    },
     },
     {timestamps:true}
     )
-    
     module.exports = mongoose.model("order", orderSchema)
+            
+    
+    
 
 
 

@@ -3,7 +3,7 @@ const customerModel = require("../model/customerModel")
 const createCustomer = async (req, res) => {
     try {
         let data = req.body
-        let { fname, lname, mobileNumber, emailId,  category, address } = data
+        let { fname, lname, mobileNumber,   category, address } = data
         if (!Object.keys(data).length) {
             return res.status(400).send({ status: false, message: "enter some data" })
         }
@@ -29,23 +29,22 @@ const createCustomer = async (req, res) => {
         if (mobileNumber.length != 10) {
             return res.status(400).send({ status: false, message: "plz enter 10 digits mobile number" })
         }
-        if(!emailId){
-            return res.status(400).send({status:false,message:"plz enter your emailId"})
-        }
-        if((/[^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}]/.test(emailId))){
-            return res.status(400).send({status:false,message:"enter the valid emailId"})
-        }
+       
+
+         if(category){
+            return res.status(400).send({status:false,message:"you cannot give the category name"})
+         }
+
+
 
         if (!address) {
             return res.status(400).send({ status: false, message: "plz enter your address" })
         }
 
         let createData = await customerModel.create(data)
-        if (!createData) {
-            return res.status(400).send({ status: "false", message: "customer is not created" })
-        }
+        
 
-        res.status(201).send({ status: true, message: "customer created successfully", data: createData })
+        return res.status(201).send({ status: true, message: "customer created successfully", data: createData })
 
 
 

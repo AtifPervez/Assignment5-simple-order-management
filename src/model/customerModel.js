@@ -12,14 +12,7 @@ const customerSchema = new mongoose.Schema({
         type: String,
         trim: true
     },
-    emailId:{
-        type:String,
-        trim:true
-    },
-     password:{
-      type:String,
-      trim:true
-     },
+   
     category: {
         type: String,
         default: "regular",
@@ -30,14 +23,31 @@ const customerSchema = new mongoose.Schema({
         type: String,
         trim: true
     },
-    
-
-
-
+    price: {
+        type: Number,
+        default: 0
+    },
+    totalOrder:{
+        type:Number,
+        default:0,
+        trim:true
+    },
+    discount:{
+      type:Number,
+      default:0,
+      trim:true
+    }
 },
     { timestamps: true }
 )
 module.exports = mongoose.model("customer", customerSchema)
+
+
+
+
+    
+
+
 
 
 
